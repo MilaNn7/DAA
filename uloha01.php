@@ -186,11 +186,7 @@ $result_objednavky_19_maj_1997 = $conn->query($sql_objednavky_19_maj_1997);
 
         <h1>požiadavka 05</h1>
         <table>
-            <thead>
-                <tr>
-                    <th>Meno</th>
-                </tr>
-            </thead>
+            
             <tbody>
                 <?php
                     $sql = "SELECT ContactName FROM customers WHERE ContactTitle = 'Marketing Manager' ORDER BY ContactName";
