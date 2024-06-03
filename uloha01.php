@@ -202,7 +202,7 @@ $result_objednavky_19_maj_1997 = $conn->query($sql_objednavky_19_maj_1997);
                     }
                     echo "</table>";
                
-                }
+                
                 ?>
             </tbody>
         </table>
