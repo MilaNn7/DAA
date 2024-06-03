@@ -26,7 +26,7 @@ $result_pocet_objednavok_1997 = $conn->query($sql_pocet_objednavok_1997);
 $row_pocet_objednavok_1997 = $result_pocet_objednavok_1997->fetch_assoc();
 
 // požiadavka 05
-$sql_manazeri = "SELECT Title FROM Employees WHERE Title LIKE '%Manager%' ORDER BY ContactName";
+$sql_manazeri = "SELECT Title FROM Employees WHERE Title LIKE '%Manager%' ORDER BY LastName";
 $result_manazeri = $conn->query($sql_manazeri);
 
 // požiadavka 06
