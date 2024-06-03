@@ -208,29 +208,22 @@ $result_objednavky_19_maj_1997 = $conn->query($sql_objednavky_19_maj_1997);
         </table>
 
         <h1>požiadavka 06</h1>
-        <table>
-            <thead>
-                <tr>
-                    <?php
-                    $fields = $result_objednavky_19_maj_1997->fetch_fields();
-                    foreach ($fields as $field) {
-                        echo "<th>{$field->name}</th>";
-                    }
-                    ?>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                while ($row = $result_objednavky_19_maj_1997->fetch_assoc()) {
-                    echo "<tr>";
-                    foreach ($row as $value) {
-                        echo "<td>{$value}</td>";
-                    }
-                    echo "</tr>";
-                }
-                ?>
-            </tbody>
-        </table>
+        <?php
+            $sql = "SELECT * FROM orders WHERE OrderDate = '1997-05-19'";
+            $result = $conn->query($sql);
+            echo "<table>";
+            while ($fieldinfo = $result->fetch_field()) {
+            echo "<th>{$fieldinfo->name}</th>";
+            }
+            while ($row = $result->fetch_assoc()) {
+            echo "<tr>";
+            foreach ($row as $cell) {
+             echo "<td>{$cell}</td>";
+        }
+        echo "</tr>";
+    }
+    echo "</table>";
+    ?>
     </div>
 </body>
 </html>
