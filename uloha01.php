@@ -195,7 +195,7 @@ $result_objednavky_19_maj_1997 = $conn->query($sql_objednavky_19_maj_1997);
                 <?php
                 while ($row = $result_manazeri->fetch_assoc()) {
                     echo "<tr>";
-                    echo "<td>{$row['ContactName']}</td>";
+                    echo "<td>{$row['Title']}</td>";
                     echo "</tr>";
                 }
                 ?>
