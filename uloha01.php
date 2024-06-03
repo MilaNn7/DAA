@@ -193,10 +193,15 @@ $result_objednavky_19_maj_1997 = $conn->query($sql_objednavky_19_maj_1997);
             </thead>
             <tbody>
                 <?php
-                while ($row = $result_manazeri->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>{$row['Title']}</td>";
-                    echo "</tr>";
+                    $sql = "SELECT ContactName FROM customers WHERE ContactTitle = 'Marketing Manager' ORDER BY ContactName";
+                    $result = $conn->query($sql);
+                    echo "<table>";
+                    echo "<tr><th>Contact Name</th></tr>";
+                    while ($row = $result->fetch_assoc()) {
+                    echo "<tr><td>{$row['ContactName']}</td></tr>";
+                    }
+                    echo "</table>";
+               
                 }
                 ?>
             </tbody>
