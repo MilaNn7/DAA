@@ -1,6 +1,9 @@
 <?php
 require_once "connect.php";
-require_once "menu.php";
+$servername = "localhost";
+    $username = "userdb";
+    $password = "databaza";
+    $dbname = "northwind";
 
 // požiadavka 01
 $sql_zakaznici = "SELECT * FROM Customers";
