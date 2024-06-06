@@ -4,7 +4,7 @@ session_start();
 $servername = "localhost";
 $username = "userdb";
 $password = "databaza";
-$dbname = "northwindmysql";
+$dbname = "norhtwindmysql";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
