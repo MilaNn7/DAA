@@ -11,3 +11,7 @@
 <?php
 require_once "connect.php";
 ?>
+<?php $conn->close(); ?>
+
+</body>
+</html>
