@@ -210,7 +210,7 @@ echo "<p>Počet objednávok uskutočnených v roku 1995: {$row['order_count']}</
 
         <h1>požiadavka 06</h1>
         <?php
-            $sql = "SELECT * FROM orders WHERE OrderDate = '1997-05-19'";
+            $sql = "SELECT * FROM orders WHERE OrderDate = '1995-09-28'";
             $result = $conn->query($sql);
             echo "<table>";
             while ($fieldinfo = $result->fetch_field()) {
