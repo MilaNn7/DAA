@@ -182,7 +182,7 @@ $result_objednavky_19_maj_1997 = $conn->query($sql_objednavky_19_maj_1997);
         </table>
 
         <h1>požiadavka 04</h1>
-        <p>Počet všetkých objednávok uskutočnených v roku 1997: <?php echo $row_pocet_objednavok_1997['pocet']; ?></p>
+        <p>Počet všetkých objednávok uskutočnených v roku 1995: <?php echo $row_pocet_objednavok_1995['pocet']; ?></p>
 
         <h1>požiadavka 05</h1>
         <table>
