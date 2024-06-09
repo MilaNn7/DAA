@@ -20,10 +20,7 @@ $result_abecedne_zakaznici = $conn->query($sql_abecedne_zakaznici);
 $sql_objednavky_datum = "SELECT * FROM Orders ORDER BY OrderDate";
 $result_objednavky_datum = $conn->query($sql_objednavky_datum);
 
-// požiadavka 04
-$sql_pocet_objednavok_1995 = "SELECT COUNT(*) as pocet FROM Orders WHERE YEAR(OrderDate) = 1995";
-$result_pocet_objednavok_1995 = $conn->query($sql_pocet_objednavok_1995);
-$row_pocet_objednavok_1995 = $result_pocet_objednavok_1995->fetch_assoc();
+
 
 // požiadavka 05
 $sql_manazeri = "SELECT Title FROM Employees WHERE Title LIKE '%Manager%' ORDER BY LastName";
