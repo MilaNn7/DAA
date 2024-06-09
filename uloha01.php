@@ -182,15 +182,12 @@ $result_objednavky_19_maj_1997 = $conn->query($sql_objednavky_19_maj_1997);
         </table>
 
         <h1>požiadavka 04</h1>
-         $sql = "SELECT COUNT(*) as order_count FROM orders WHERE YEAR(OrderDate) = 1995";
-        $result = $conn->query($sql);
-
-  
-        
-        
-        $row = $result->fetch_assoc();
-        
-        echo "<p>Počet objednávok uskutočnených v roku 1995: {$row['order_count']}</p>";
+<?php
+$sql = "SELECT COUNT(*) as order_count FROM orders WHERE YEAR(OrderDate) = 1995";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+echo "<p>Počet objednávok uskutočnených v roku 1995: {$row['order_count']}</p>";
+?>
 
         <h1>požiadavka 05</h1>
         <table>
