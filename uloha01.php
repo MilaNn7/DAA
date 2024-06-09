@@ -30,8 +30,8 @@ $sql_manazeri = "SELECT Title FROM Employees WHERE Title LIKE '%Manager%' ORDER 
 $result_manazeri = $conn->query($sql_manazeri);
 
 // požiadavka 06
-$sql_objednavky_19_maj_1997 = "SELECT * FROM Orders WHERE OrderDate = '1997-05-19'";
-$result_objednavky_19_maj_1997 = $conn->query($sql_objednavky_19_maj_1997);
+$sql_objednavky_28_september_1995 = "SELECT * FROM Orders WHERE OrderDate = '1995-09-28'";
+$result_objednavky_28_september_1995 = $conn->query($sql_objednavky_28_september_1995);
 
 ?>
 <!DOCTYPE html>
