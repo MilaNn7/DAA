@@ -11,6 +11,20 @@
 <?php
 require_once "connect.php";
 ?>
+
+<h1>Požiadavka 1</h1>
+<?php
+$sql = "
+    SELECT SUM(od.UnitPrice * od.Quantity) as TotalRevenue
+    FROM `order details` od
+    JOIN orders o ON od.OrderID = o.OrderID
+    WHERE YEAR(o.OrderDate) = 1994
+";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+echo "Celkové príjmy v roku 1994: " . $row['TotalRevenue'] . " USD";
+?>
+    
 <?php $conn->close(); ?>
 
 </body>
