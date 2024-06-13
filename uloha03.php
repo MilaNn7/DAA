@@ -22,7 +22,7 @@ $sql = "
 ";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
-echo "Celkové príjmy v roku 1994: " . $row['TotalRevenue'] . " USD";
+echo "Celkové príjmy v roku 1994: " . $row['TotalRevenue'];
 ?>
     
 <?php $conn->close(); ?>
