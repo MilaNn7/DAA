@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Úloha 03</title>
-    
 </head>
 <body>
 
@@ -24,6 +23,7 @@ $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 echo "Celkové príjmy v roku 1994: " . $row['TotalRevenue'];
 ?>
+
 <h1>požiadavka 02</h1>
 <?php
 $sql = "
@@ -31,8 +31,7 @@ $sql = "
     FROM customers c
     JOIN orders o ON c.CustomerID = o.CustomerID
     JOIN `order details` od ON o.OrderID = od.OrderID
-    GROUP BY c.CustomerID, c.CompanyName
-";
+    GROUP BY c.CustomerID, c.CompanyName";
 $result = $conn->query($sql);
 echo "<table>";
 echo "<tr><th>Customer ID</th><th>Company Name</th><th>Total Paid</th></tr>";
@@ -50,8 +49,7 @@ $sql = "
     JOIN `order details` od ON p.ProductID = od.ProductID
     GROUP BY p.ProductID, p.ProductName
     ORDER BY TotalSold DESC
-    LIMIT 10
-";
+    LIMIT 10";
 $result = $conn->query($sql);
 echo "<table>";
 echo "<tr><th>Product ID</th><th>Product Name</th><th>Total Sold</th></tr>";
@@ -68,8 +66,7 @@ $sql = "
     FROM customers c
     JOIN orders o ON c.CustomerID = o.CustomerID
     JOIN `order details` od ON o.OrderID = od.OrderID
-    GROUP BY c.CustomerID, c.CompanyName
-";
+    GROUP BY c.CustomerID, c.CompanyName";
 $result = $conn->query($sql);
 echo "<table>";
 echo "<tr><th>Customer ID</th><th>Company Name</th><th>Total Revenue</th></tr>";
@@ -88,8 +85,7 @@ $sql = "
     JOIN `order details` od ON o.OrderID = od.OrderID
     WHERE c.Country = 'UK'
     GROUP BY c.CustomerID, c.CompanyName
-    HAVING TotalPaid > 1000
-";
+    HAVING TotalPaid > 1000";
 $result = $conn->query($sql);
 echo "<table>";
 echo "<tr><th>Customer ID</th><th>Company Name</th><th>Total Paid</th></tr>";
@@ -108,8 +104,7 @@ $sql = "
     FROM customers c
     JOIN orders o ON c.CustomerID = o.CustomerID
     JOIN `order details` od ON o.OrderID = od.OrderID
-    GROUP BY c.CustomerID, c.CompanyName, c.Country
-";
+    GROUP BY c.CustomerID, c.CompanyName, c.Country";
 $result = $conn->query($sql);
 echo "<table>";
 echo "<tr><th>Customer ID</th><th>Company Name</th><th>Country</th><th>Total Paid</th><th>Total Paid in 1995</th></tr>";
@@ -123,8 +118,7 @@ echo "</table>";
 <?php
 $sql = "
     SELECT COUNT(DISTINCT CustomerID) as TotalCustomers
-    FROM orders
-";
+    FROM orders";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 echo "Celkový počet zákazníkov: " . $row['TotalCustomers'];
@@ -135,8 +129,7 @@ echo "Celkový počet zákazníkov: " . $row['TotalCustomers'];
 $sql = "
     SELECT COUNT(DISTINCT o.CustomerID) as TotalCustomers1997
     FROM orders o
-    WHERE YEAR(o.OrderDate) = 1997
-";
+    WHERE YEAR(o.OrderDate) = 1997";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 echo "Celkový počet zákazníkov v roku 1997: " . $row['TotalCustomers1997'];
